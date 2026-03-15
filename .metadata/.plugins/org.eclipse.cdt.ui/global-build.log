@@ -1,0 +1,457 @@
+01:14:12 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:49: error: 'LIS_ADDR' undeclared (first use in this function); did you mean 'LIS2DE_ADDR'?
+  177 |                 HAL_I2C_Master_Transmit(&hi2c1, LIS_ADDR, &start_reg, 1, 100);
+      |                                                 ^~~~~~~~
+      |                                                 LIS2DE_ADDR
+../Core/Src/main.c:177:49: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:14:56 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "IMU2IR2LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\IMU2IR2LCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IMU2IR2LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IMU2IR2LCD.elf
+ 
+arm-none-eabi-size  IMU2IR2LCD.elf 
+arm-none-eabi-objdump -h -S IMU2IR2LCD.elf  > "IMU2IR2LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  32788	    136	   2664	  35588	   8b04	IMU2IR2LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: IMU2IR2LCD.list
+ 
+01:16:56 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc -o "IMU2IR2LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\IMU2IR2LCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IMU2IR2LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IMU2IR2LCD.elf
+ 
+arm-none-eabi-size  IMU2IR2LCD.elf 
+arm-none-eabi-objdump -h -S IMU2IR2LCD.elf  > "IMU2IR2LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  51700	    512	   2672	  54884	   d664	IMU2IR2LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: IMU2IR2LCD.list
+ 
+01:21:02 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:66:21: error: 'OUT' undeclared here (not in a function)
+   66 | uint8_t start_reg = OUT | 0b10000000; // Setting the first bit to 1 enables auto-increment
+      |                     ^~~
+../Core/Src/main.c:67:9: error: conflicting types for 'rx_buf'; have 'uint8_t[1]' {aka 'unsigned char[1]'}
+   67 | uint8_t rx_buf[1];           // فقط بایت Z_H را می‌خوانیم
+      |         ^~~~~~
+../Core/Src/main.c:65:9: note: previous declaration of 'rx_buf' with type 'uint8_t[6]' {aka 'unsigned char[6]'}
+   65 | uint8_t rx_buf[6];
+      |         ^~~~~~
+../Core/Src/main.c:88:18: error: redefinition of 'data_ready'
+   88 | volatile uint8_t data_ready = 0;
+      |                  ^~~~~~~~~~
+../Core/Src/main.c:69:18: note: previous definition of 'data_ready' with type 'uint8_t' {aka 'volatile unsigned char'}
+   69 | volatile uint8_t data_ready = 0;
+      |                  ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:159:35: error: 'LIS2DE_ADDR' undeclared (first use in this function); did you mean 'LIS_ADDR'?
+  159 |   HAL_I2C_Master_Transmit(&hi2c1, LIS2DE_ADDR, i2c_buf, 2, 100);
+      |                                   ^~~~~~~~~~~
+      |                                   LIS_ADDR
+../Core/Src/main.c:159:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:245:13: error: invalid storage class for function 'MX_I2C1_Init'
+  245 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:279:13: error: invalid storage class for function 'MX_TIM2_Init'
+  279 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:338:13: error: invalid storage class for function 'MX_TIM3_Init'
+  338 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:383:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  383 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:414:13: error: invalid storage class for function 'MX_DMA_Init'
+  414 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:441:13: error: invalid storage class for function 'MX_GPIO_Init'
+  441 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:505:1: error: expected declaration or statement at end of input
+  505 | }
+      | ^
+../Core/Src/main.c:505:1: error: expected declaration or statement at end of input
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:76:13: warning: 'MX_GPIO_Init' used but never defined
+   76 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:77:13: warning: 'MX_DMA_Init' used but never defined
+   77 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:78:13: warning: 'MX_USART2_UART_Init' used but never defined
+   78 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:79:13: warning: 'MX_TIM2_Init' used but never defined
+   79 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:80:13: warning: 'MX_I2C1_Init' used but never defined
+   80 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:81:13: warning: 'MX_TIM3_Init' used but never defined
+   81 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:496:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  496 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:441:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  441 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:414:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  414 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:383:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  383 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:338:13: warning: 'MX_TIM3_Init' defined but not used [-Wunused-function]
+  338 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+  279 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:245:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  245 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:198:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  198 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:21:28 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:66:21: error: 'OUT' undeclared here (not in a function)
+   66 | uint8_t start_reg = OUT | 0b10000000; // Setting the first bit to 1 enables auto-increment
+      |                     ^~~
+../Core/Src/main.c:69:9: error: conflicting types for 'rx_buf'; have 'uint8_t[1]' {aka 'unsigned char[1]'}
+   69 | uint8_t rx_buf[1];           // فقط بایت Z_H را می‌خوانیم
+      |         ^~~~~~
+../Core/Src/main.c:65:9: note: previous declaration of 'rx_buf' with type 'uint8_t[6]' {aka 'unsigned char[6]'}
+   65 | uint8_t rx_buf[6];
+      |         ^~~~~~
+../Core/Src/main.c:70:6: error: conflicting types for 'string'; have 'char[20]'
+   70 | char string[20];
+      |      ^~~~~~
+../Core/Src/main.c:67:6: note: previous declaration of 'string' with type 'char[64]'
+   67 | char string[64];
+      |      ^~~~~~
+../Core/Src/main.c:90:18: error: redefinition of 'data_ready'
+   90 | volatile uint8_t data_ready = 0;
+      |                  ^~~~~~~~~~
+../Core/Src/main.c:71:18: note: previous definition of 'data_ready' with type 'uint8_t' {aka 'volatile unsigned char'}
+   71 | volatile uint8_t data_ready = 0;
+      |                  ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:35: error: 'LIS2DE_ADDR' undeclared (first use in this function); did you mean 'LIS_ADDR'?
+  161 |   HAL_I2C_Master_Transmit(&hi2c1, LIS2DE_ADDR, i2c_buf, 2, 100);
+      |                                   ^~~~~~~~~~~
+      |                                   LIS_ADDR
+../Core/Src/main.c:161:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:247:13: error: invalid storage class for function 'MX_I2C1_Init'
+  247 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:281:13: error: invalid storage class for function 'MX_TIM2_Init'
+  281 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:340:13: error: invalid storage class for function 'MX_TIM3_Init'
+  340 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:385:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  385 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:416:13: error: invalid storage class for function 'MX_DMA_Init'
+  416 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:443:13: error: invalid storage class for function 'MX_GPIO_Init'
+  443 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:507:1: error: expected declaration or statement at end of input
+  507 | }
+      | ^
+../Core/Src/main.c:507:1: error: expected declaration or statement at end of input
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:78:13: warning: 'MX_GPIO_Init' used but never defined
+   78 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:79:13: warning: 'MX_DMA_Init' used but never defined
+   79 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:80:13: warning: 'MX_USART2_UART_Init' used but never defined
+   80 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:81:13: warning: 'MX_TIM2_Init' used but never defined
+   81 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:82:13: warning: 'MX_I2C1_Init' used but never defined
+   82 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:83:13: warning: 'MX_TIM3_Init' used but never defined
+   83 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:498:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  498 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:443:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  443 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:416:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  416 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:385:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  385 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:340:13: warning: 'MX_TIM3_Init' defined but not used [-Wunused-function]
+  340 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:281:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+  281 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:247:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  247 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:200:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  200 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:22:05 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:66:21: error: 'OUT' undeclared here (not in a function)
+   66 | uint8_t start_reg = OUT | 0b10000000; // Setting the first bit to 1 enables auto-increment
+      |                     ^~~
+../Core/Src/main.c:69:9: error: conflicting types for 'rx_buf'; have 'uint8_t[1]' {aka 'unsigned char[1]'}
+   69 | uint8_t rx_buf[1];           // فقط بایت Z_H را می‌خوانیم
+      |         ^~~~~~
+../Core/Src/main.c:65:9: note: previous declaration of 'rx_buf' with type 'uint8_t[6]' {aka 'unsigned char[6]'}
+   65 | uint8_t rx_buf[6];
+      |         ^~~~~~
+../Core/Src/main.c:70:6: error: conflicting types for 'string'; have 'char[20]'
+   70 | char string[20];
+      |      ^~~~~~
+../Core/Src/main.c:67:6: note: previous declaration of 'string' with type 'char[64]'
+   67 | char string[64];
+      |      ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:160:35: error: 'LIS2DE_ADDR' undeclared (first use in this function); did you mean 'LIS_ADDR'?
+  160 |   HAL_I2C_Master_Transmit(&hi2c1, LIS2DE_ADDR, i2c_buf, 2, 100);
+      |                                   ^~~~~~~~~~~
+      |                                   LIS_ADDR
+../Core/Src/main.c:160:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:246:13: error: invalid storage class for function 'MX_I2C1_Init'
+  246 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:280:13: error: invalid storage class for function 'MX_TIM2_Init'
+  280 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:13: error: invalid storage class for function 'MX_TIM3_Init'
+  339 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:384:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  384 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:415:13: error: invalid storage class for function 'MX_DMA_Init'
+  415 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:442:13: error: invalid storage class for function 'MX_GPIO_Init'
+  442 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:506:1: error: expected declaration or statement at end of input
+  506 | }
+      | ^
+../Core/Src/main.c:506:1: error: expected declaration or statement at end of input
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:78:13: warning: 'MX_GPIO_Init' used but never defined
+   78 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:79:13: warning: 'MX_DMA_Init' used but never defined
+   79 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:80:13: warning: 'MX_USART2_UART_Init' used but never defined
+   80 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:81:13: warning: 'MX_TIM2_Init' used but never defined
+   81 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:82:13: warning: 'MX_I2C1_Init' used but never defined
+   82 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:83:13: warning: 'MX_TIM3_Init' used but never defined
+   83 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:497:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  497 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:442:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  442 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:415:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  415 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:384:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  384 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:339:13: warning: 'MX_TIM3_Init' defined but not used [-Wunused-function]
+  339 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:280:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+  280 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:246:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  246 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:199:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  199 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:17:20 **** Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:185:29: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  185 |   HAL_ADC_Start_DMA(&hadc1, &adc_dma_buffer, 1);
+      |                             ^~~~~~~~~~~~~~~
+      |                             |
+      |                             uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  33832	    512	   2312	  36656	   8f30	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+11:18:29 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:124:10: warning: unused variable 'string' [-Wunused-variable]
+  124 |     char string[17];
+      |          ^~~~~~
+../Core/Src/main.c:123:11: warning: unused variable 'voltage' [-Wunused-variable]
+  123 |     float voltage = adc_dma_buffer*3.3/4096.0;
+      |           ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:185:29: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  185 |   HAL_ADC_Start_DMA(&hadc1, &adc_dma_buffer, 1);
+      |                             ^~~~~~~~~~~~~~~
+      |                             |
+      |                             uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  32296	    512	   2296	  35104	   8920	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+11:21:59 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:126:10: warning: unused variable 'string' [-Wunused-variable]
+  126 |     char string[17];
+      |          ^~~~~~
+../Core/Src/main.c:125:11: warning: unused variable 'voltage' [-Wunused-variable]
+  125 |     float voltage = adc_dma_buffer*3.3/4096.0;
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  32320	    512	   2296	  35128	   8938	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+11:27:35 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:126:10: warning: unused variable 'string' [-Wunused-variable]
+  126 |     char string[17];
+      |          ^~~~~~
+../Core/Src/main.c:125:11: warning: unused variable 'voltage' [-Wunused-variable]
+  125 |     float voltage = adc_dma_buffer*3.3/4096.0;
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  32320	    512	   2296	  35128	   8938	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+11:29:30 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:126:10: warning: unused variable 'string' [-Wunused-variable]
+  126 |     char string[17];
+      |          ^~~~~~
+../Core/Src/main.c:125:11: warning: unused variable 'voltage' [-Wunused-variable]
+  125 |     float voltage = adc_dma_buffer*3.3/4096.0;
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  32320	    516	   2300	  35136	   8940	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+11:31:28 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  33856	    516	   2316	  36688	   8f50	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 

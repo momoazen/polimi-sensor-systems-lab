@@ -1,0 +1,94 @@
+01:22:05 **** Incremental Build of configuration Debug for project IMU2IR2LCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:66:21: error: 'OUT' undeclared here (not in a function)
+   66 | uint8_t start_reg = OUT | 0b10000000; // Setting the first bit to 1 enables auto-increment
+      |                     ^~~
+../Core/Src/main.c:69:9: error: conflicting types for 'rx_buf'; have 'uint8_t[1]' {aka 'unsigned char[1]'}
+   69 | uint8_t rx_buf[1];           // فقط بایت Z_H را می‌خوانیم
+      |         ^~~~~~
+../Core/Src/main.c:65:9: note: previous declaration of 'rx_buf' with type 'uint8_t[6]' {aka 'unsigned char[6]'}
+   65 | uint8_t rx_buf[6];
+      |         ^~~~~~
+../Core/Src/main.c:70:6: error: conflicting types for 'string'; have 'char[20]'
+   70 | char string[20];
+      |      ^~~~~~
+../Core/Src/main.c:67:6: note: previous declaration of 'string' with type 'char[64]'
+   67 | char string[64];
+      |      ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:160:35: error: 'LIS2DE_ADDR' undeclared (first use in this function); did you mean 'LIS_ADDR'?
+  160 |   HAL_I2C_Master_Transmit(&hi2c1, LIS2DE_ADDR, i2c_buf, 2, 100);
+      |                                   ^~~~~~~~~~~
+      |                                   LIS_ADDR
+../Core/Src/main.c:160:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:246:13: error: invalid storage class for function 'MX_I2C1_Init'
+  246 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:280:13: error: invalid storage class for function 'MX_TIM2_Init'
+  280 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:13: error: invalid storage class for function 'MX_TIM3_Init'
+  339 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:384:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  384 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:415:13: error: invalid storage class for function 'MX_DMA_Init'
+  415 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:442:13: error: invalid storage class for function 'MX_GPIO_Init'
+  442 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:506:1: error: expected declaration or statement at end of input
+  506 | }
+      | ^
+../Core/Src/main.c:506:1: error: expected declaration or statement at end of input
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:78:13: warning: 'MX_GPIO_Init' used but never defined
+   78 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:79:13: warning: 'MX_DMA_Init' used but never defined
+   79 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:80:13: warning: 'MX_USART2_UART_Init' used but never defined
+   80 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:81:13: warning: 'MX_TIM2_Init' used but never defined
+   81 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:82:13: warning: 'MX_I2C1_Init' used but never defined
+   82 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:83:13: warning: 'MX_TIM3_Init' used but never defined
+   83 | static void MX_TIM3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:497:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  497 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:442:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  442 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:415:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  415 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:384:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  384 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:339:13: warning: 'MX_TIM3_Init' defined but not used [-Wunused-function]
+  339 | static void MX_TIM3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:280:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+  280 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:246:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  246 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:199:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  199 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+01:22:05 Build Failed. 13 errors, 14 warnings. (took 641ms)
+

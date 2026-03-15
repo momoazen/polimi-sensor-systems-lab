@@ -1,0 +1,10 @@
+19:57:44 **** Incremental Build of configuration Debug for project LCDMembers_ProgressBar ****
+make -j4 all 
+arm-none-eabi-size  LCDMembers_ProgressBar.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11764	     76	   1740	  13580	   350c	LCDMembers_ProgressBar.elf
+Finished building: default.size.stdout
+ 
+
+19:57:44 Build Finished. 0 errors, 0 warnings. (took 374ms)
+

@@ -1,0 +1,10 @@
+00:17:16 **** Incremental Build of configuration Debug for project Hw08_AccelerometerDMA ****
+make -j4 all 
+arm-none-eabi-size  Hw08_AccelerometerDMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41680	    472	   2400	  44552	   ae08	Hw08_AccelerometerDMA.elf
+Finished building: default.size.stdout
+ 
+
+00:17:17 Build Finished. 0 errors, 0 warnings. (took 1s.756ms)
+

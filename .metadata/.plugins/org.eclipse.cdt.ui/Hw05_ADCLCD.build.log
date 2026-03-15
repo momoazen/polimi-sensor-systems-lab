@@ -1,0 +1,17 @@
+11:31:28 **** Incremental Build of configuration Debug for project Hw05_ADCLCD ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Hw05_ADCLCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MMK\STM32CubeIDE\workspace_1.19.0\SensorSystemsLabs\SensorSystemsLabs-main\Homework05\Hw05_ADCLCD\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hw05_ADCLCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hw05_ADCLCD.elf
+ 
+arm-none-eabi-size  Hw05_ADCLCD.elf 
+arm-none-eabi-objdump -h -S Hw05_ADCLCD.elf  > "Hw05_ADCLCD.list"
+   text	   data	    bss	    dec	    hex	filename
+  33856	    516	   2316	  36688	   8f50	Hw05_ADCLCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hw05_ADCLCD.list
+ 
+
+11:31:30 Build Finished. 0 errors, 0 warnings. (took 1s.25ms)
+

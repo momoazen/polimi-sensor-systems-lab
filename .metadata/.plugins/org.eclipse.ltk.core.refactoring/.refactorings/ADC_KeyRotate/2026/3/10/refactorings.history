@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ADC_KeyRotate/ADC_KeyControl.ioc&apos; to &apos;ADC_KeyRotate.ioc&apos;" description="Rename resource &apos;ADC_KeyControl.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ADC_KeyControl.ioc" name="ADC_KeyRotate.ioc" stamp="1772392819442" updateReferences="true"/>
+</session>

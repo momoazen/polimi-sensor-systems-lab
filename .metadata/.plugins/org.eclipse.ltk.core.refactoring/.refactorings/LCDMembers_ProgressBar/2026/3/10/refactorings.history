@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LCDMembers_ProgressBar/Hw04_LCDMembers.ioc&apos; to &apos;LCDMembers_ProgressBar.ioc&apos;" description="Rename resource &apos;Hw04_LCDMembers.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw04_LCDMembers.ioc" name="LCDMembers_ProgressBar.ioc" stamp="1772390311252" updateReferences="true"/>
+</session>
