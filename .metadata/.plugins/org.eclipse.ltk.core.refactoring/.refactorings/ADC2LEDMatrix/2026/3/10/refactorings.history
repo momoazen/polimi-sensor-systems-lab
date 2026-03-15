@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ADC2LEDMatrix/Hw09_LEDMatrix.ioc&apos; to &apos;ADC2LED.ioc&apos;" description="Rename resource &apos;Hw09_LEDMatrix.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw09_LEDMatrix.ioc" name="ADC2LED.ioc" stamp="1772376045458" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ADC2LEDMatrix/ADC2LED.ioc&apos; to &apos;ADC2LEDMatrix.ioc&apos;" description="Rename resource &apos;ADC2LED.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ADC2LED.ioc" name="ADC2LEDMatrix.ioc" stamp="1772376062609" updateReferences="true"/>
+</session>

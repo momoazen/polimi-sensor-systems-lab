@@ -1,0 +1,10 @@
+18:59:00 **** Incremental Build of configuration Debug for project LDR2PWM ****
+make -j4 all 
+arm-none-eabi-size  LDR2PWM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  38336	    468	   4348	  43152	   a890	LDR2PWM.elf
+Finished building: default.size.stdout
+ 
+
+18:59:01 Build Finished. 0 errors, 0 warnings. (took 321ms)
+

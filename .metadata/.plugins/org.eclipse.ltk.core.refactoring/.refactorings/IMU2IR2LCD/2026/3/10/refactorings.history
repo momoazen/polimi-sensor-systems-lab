@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;IMU2IR2LCD/Hw04_LCDMembers.ioc&apos; to &apos;IMU2IR2LCD.ioc&apos;" description="Rename resource &apos;Hw04_LCDMembers.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw04_LCDMembers.ioc" name="IMU2IR2LCD.ioc" stamp="1772407386393" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;IMU2IR2LCD/Debug/Hw04_LCDMembers.elf&apos; to &apos;IMU2IR2LCD.elf&apos;" description="Rename resource &apos;Hw04_LCDMembers.elf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Debug/Hw04_LCDMembers.elf" name="IMU2IR2LCD.elf" stamp="1772409406699" updateReferences="true"/>
+</session>

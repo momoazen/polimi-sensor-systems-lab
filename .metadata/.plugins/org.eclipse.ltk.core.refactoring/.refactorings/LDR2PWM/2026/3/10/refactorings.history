@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LDR2PWM/Hw06_LDR.ioc&apos; to &apos;LDR2PWM.ioc&apos;" description="Rename resource &apos;Hw06_LDR.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw06_LDR.ioc" name="LDR2PWM.ioc" stamp="1772381318209" updateReferences="true"/>
+</session>

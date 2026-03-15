@@ -1,0 +1,10 @@
+19:20:07 **** Incremental Build of configuration Debug for project Hw10_Keyboard ****
+make -j4 all 
+arm-none-eabi-size  Hw10_Keyboard.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18612	     92	   2236	  20940	   51cc	Hw10_Keyboard.elf
+Finished building: default.size.stdout
+ 
+
+19:20:07 Build Finished. 0 errors, 0 warnings. (took 459ms)
+

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ADC_KeyControl/Hw06_ADCDMA.ioc&apos; to &apos;ADC_KeyControl.ioc&apos;" description="Rename resource &apos;Hw06_ADCDMA.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw06_ADCDMA.ioc" name="ADC_KeyControl.ioc" stamp="1772387291905" updateReferences="true"/>&#x0A;&#x0A;<refactoring comment="Rename resource &apos;ADC_KeyControl/Hw10_Keyboard.ioc&apos; to &apos;ADC_KeyControl.ioc&apos;" description="Rename resource &apos;Hw10_Keyboard.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hw10_Keyboard.ioc" name="ADC_KeyControl.ioc" stamp="1772387966532" updateReferences="true"/>
+</session>

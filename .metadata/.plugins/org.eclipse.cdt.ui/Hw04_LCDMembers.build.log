@@ -1,0 +1,10 @@
+00:56:51 **** Incremental Build of configuration Debug for project Hw04_LCDMembers ****
+make -j4 all 
+arm-none-eabi-size  Hw04_LCDMembers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11596	     76	   1724	  13396	   3454	Hw04_LCDMembers.elf
+Finished building: default.size.stdout
+ 
+
+00:56:51 Build Finished. 0 errors, 0 warnings. (took 343ms)
+
